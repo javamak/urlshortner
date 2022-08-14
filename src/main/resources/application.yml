@@ -1,0 +1,38 @@
+spring:
+  data:
+    cassandra:
+      schemaAction: CREATE_IF_NOT_EXISTS
+      request:
+        timeout: 10s
+      connection:
+        connectTimeout: 10s
+        initQueryTimeout: 10s
+
+# Credentials to Astra DB
+astra:
+  api:
+    applicationToken: AstraCS:dfasfdsafd:sdfasfdasfda
+    databaseId: fdasfsdfasd-3443-43-4343-fdsfds
+    databaseRegion: europe-west1
+#  grpc:
+#    enabled: true
+  cql:
+    enabled: true
+    downloadScb:
+      enabled: true
+    metrics:
+      enabled: true
+    grpc:
+      enabled: true
+    driver-config:
+      basic:
+        session-keyspace: tinyurl_ks
+
+app:
+  url: http://localhost:80/
+
+server:
+  port: 8080
+
+tw-curator:
+  zookeeper-connect-string: "zoo1:2181"
